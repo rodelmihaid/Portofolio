@@ -1,0 +1,42 @@
+<div
+  class="text-white items-center p-4 mt-4 mr-40 ml-40 rounded-3xl z-1 fixed opacity-90 bg-white 2xl:min-w-[1200px]"
+  style="
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.22),
+      0 5px 14px 0 rgba(0, 0, 0, 0.18);
+  "
+>
+  <nav class="flex justify-center h-15">
+    <!-- <div class="text-white font-bold">Logo</div> -->
+    <div class="flex items-center">
+      <a
+        class="mr-7 text-black text-lg font-bold cursor-pointer hover:text-gray-500 md:text-sm md:ml-5"
+        ><mat-icon class="mt-2" (click)="scrollUp()">home</mat-icon></a
+      >
+      <a
+        class="mr-7 text-black text-lg font-bold cursor-pointer hover:text-gray-500 md:text-sm"
+        (click)="scrollToAbout()"
+        >About me</a
+      >
+      <a
+        class="mr-7 text-black text-lg font-bold cursor-pointer hover:text-gray-500 md:text-sm"
+        (click)="scrollToPortofolio()"
+        >Portofolio</a
+      >
+      <a
+        class="mr-7 text-black text-lg font-bold cursor-pointer hover:text-gray-500 md:text-sm"
+        >Skills</a
+      >
+      <a
+        class="mr-7 text-black text-lg font-bold cursor-pointer hover:text-gray-500 md:text-sm"
+        >Resume</a
+      >
+      <a
+        class="mr-7 text-black text-lg font-bold cursor-pointer hover:text-gray-500 md:text-sm"
+        >Contact</a
+      >
+    </div>
+  </nav>
+</div>
+<app-description id="up"></app-description>
+<app-expertise id="aboutMe"></app-expertise>
+<app-projects id="portofolio"></app-projects>
