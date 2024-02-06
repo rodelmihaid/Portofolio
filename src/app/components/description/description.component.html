@@ -1,11 +1,15 @@
-<div class="p-20">
-  <ul class="flex items-center flex-col content-between gap-8 mt-10">
+<div class="p-20 max-500:p-5 max-768:p-10">
+  <ul
+    class="flex items-center flex-col justify-center content-between gap-8 mt-10"
+  >
     <li>
       <img src="../../../assets/eu.jpg" class="w-40 h-40 rounded-full" />
     </li>
-    <li class="text-2xl text-gray-600 max-500:text-lg">Dimulete Rodel Mihai</li>
+    <li class="text-2xl text-gray-600 max-500:text-lg font-semibold">
+      Dimulete Rodel Mihai
+    </li>
 
-    <li class="font-bold text-7xl max-500:text-5xl">
+    <li class="font-bold text-7xl max-500:text-5xl max-500:p-5 text-center">
       Full Stack Web Developer
     </li>
     <li class="max-w-[450px] text-center text-gray-600 max-500:text-base">
@@ -14,7 +18,10 @@
       workflows
     </li>
     <li>
-      <button class="rounded-3xl text-white text-lg bg-blue-600 p-3">
+      <button
+        (click)="scrollToExpertise()"
+        class="rounded-3xl text-white text-lg bg-blue-600 p-3"
+      >
         Find out more
         <mat-icon class="pt-1.5">arrow_right_alt</mat-icon>
       </button>

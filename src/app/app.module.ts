@@ -11,6 +11,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectsComponent } from './components/my-projects/projects.component';
 import { MaterialModule } from './material.module';
+import { ScrollServiceService } from './services/scroll-service.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { MaterialModule } from './material.module';
     ProjectsComponent,
   ],
   imports: [BrowserModule, BrowserAnimationsModule, MaterialModule],
-  providers: [],
+  providers: [ScrollServiceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
