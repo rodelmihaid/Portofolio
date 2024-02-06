@@ -37,6 +37,12 @@ export class MenuComponent implements OnInit {
     }
   }
 
+  scrollToCV() {
+    const cv = this.el.nativeElement.querySelector('#cv');
+    if (cv) {
+      cv.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
   ngOnInit() {
     this.scrollService.sectionToScroll$.subscribe((sectionId) => {
       const element = document.getElementById(sectionId);

@@ -1,1 +1,39 @@
-<p>cv works!</p>
+<div class="p-20 pl-32 pr-32 max-500:p-2 max-500:mt-5 max-768:p-4 max-768:mt-8">
+  <div class="p-3">
+    <a class="text-gray-500 text-2xl font-semibold">Resume</a>
+    <p class="text-5xl font-bold pt-4">Interested in working with me?</p>
+  </div>
+  <div class="p-20">
+    <div
+      class="flex gap-20 bg-[linear-gradient(300deg,#1ed0fc,#0262e0)] rounded-3xl"
+    >
+      <div>
+        <img class="max-w-[500px]" src="../../../assets/skills/avatar.jpg" />
+      </div>
+      <div class="flex flex-col justify-center gap-6">
+        <div class="text-center text-lg text-white w-[400px]">
+          If you have any questions, feel free to contact me. Additionally, you
+          can download my resume below.
+        </div>
+        <div class="flex justify-center">
+          <button
+            (click)="onDownloadClick()"
+            class="flex justify-center text-xl text-white rounded-2xl w-[200px] px-4 py-2 bg-[#0064ff]"
+          >
+            <mat-icon class="text-lg mt-[2px]">download</mat-icon>
+            Download CV
+          </button>
+        </div>
+        <div class="flex justify-center">
+          <button
+            (click)="scrollToExpertise()"
+            class="rounded-2xl px-4 py-2 flex justify-center text-xl text-white w-[200px] gap-1 bg-[#0064ff]"
+          >
+            <mat-icon class="text-lg">comment</mat-icon>
+            Contact me
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
