@@ -3,22 +3,27 @@
     <a class="text-gray-500 text-2xl font-semibold">Resume</a>
     <p class="text-5xl font-bold pt-4">Interested in working with me?</p>
   </div>
-  <div class="p-20">
+  <div class="p-20 max-500:p-1 max-768:p-1 max-1200:p-2">
     <div
-      class="flex gap-20 bg-[linear-gradient(300deg,#1ed0fc,#0262e0)] rounded-3xl"
+      class="flex gap-20 bg-[linear-gradient(300deg,#1ed0fc,#0262e0)] rounded-3xl max-500:gap-2 max-768:gap-2 max-1200:gap-5"
     >
       <div>
-        <img class="max-w-[500px]" src="../../../assets/skills/avatar.jpg" />
+        <img
+          class="max-w-[500px] max-500:w-[150px] max-500:h-[200px] max-500:mt-5"
+          src="../../../assets/skills/avatar.jpg"
+        />
       </div>
       <div class="flex flex-col justify-center gap-6">
-        <div class="text-center text-lg text-white w-[400px]">
+        <div
+          class="text-center text-lg text-white w-[400px] max-500:w-[150px] max-500:text-xs max-500:mt-5"
+        >
           If you have any questions, feel free to contact me. Additionally, you
           can download my resume below.
         </div>
         <div class="flex justify-center">
           <button
             (click)="onDownloadClick()"
-            class="flex justify-center text-xl text-white rounded-2xl w-[200px] px-4 py-2 bg-[#0064ff]"
+            class="flex justify-center text-xl text-white rounded-2xl w-[200px] px-4 py-2 bg-[#0064ff] max-500:w-[140px] max-500:text-sm"
           >
             <mat-icon class="text-lg mt-[2px]">download</mat-icon>
             Download CV
@@ -27,7 +32,7 @@
         <div class="flex justify-center">
           <button
             (click)="scrollToExpertise()"
-            class="rounded-2xl px-4 py-2 flex justify-center text-xl text-white w-[200px] gap-1 bg-[#0064ff]"
+            class="rounded-2xl px-4 py-2 flex justify-center text-xl text-white w-[200px] gap-1 bg-[#0064ff] max-500:w-[140px] max-500:text-sm max-500:mb-3"
           >
             <mat-icon class="text-lg">comment</mat-icon>
             Contact me
