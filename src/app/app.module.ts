@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectsComponent } from './components/my-projects/projects.component';
 import { MaterialModule } from './material.module';
 import { ScrollServiceService } from './services/scroll-service.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,12 @@ import { ScrollServiceService } from './services/scroll-service.service';
     SkillsComponent,
     ProjectsComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, MaterialModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    ReactiveFormsModule,
+  ],
   providers: [ScrollServiceService],
   bootstrap: [AppComponent],
 })

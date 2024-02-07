@@ -1,21 +1,23 @@
-<div class="p-20 pl-32 pr-32 max-500:p-2 max-500:mt-5 max-768:p-4 max-768:mt-8">
+<div class="p-20 pl-32 pr-32 max-500:p-1 max-500:mt-5 max-768:p-4 max-768:mt-8">
   <div class="p-3">
     <a class="text-gray-500 text-2xl font-semibold">Resume</a>
     <p class="text-5xl font-bold pt-4">Interested in working with me?</p>
   </div>
-  <div class="p-20 max-500:p-1 max-768:p-1 max-1200:p-2">
+  <div class="p-20 max-500:p-1 max-768:p-1 max-1200:p-0">
     <div
-      class="flex gap-20 bg-[linear-gradient(300deg,#1ed0fc,#0262e0)] rounded-3xl max-500:gap-2 max-768:gap-2 max-1200:gap-5"
+      class="flex justify-around bg-[linear-gradient(300deg,#1ed0fc,#0262e0)] rounded-3xl max-500:gap-2 max-768:gap-2 max-1200:gap-0"
     >
       <div>
         <img
-          class="max-w-[500px] max-500:w-[150px] max-500:h-[200px] max-500:mt-5"
+          class="max-w-[500px] max-500:w-[170px] max-500:h-[170px] max-500:mt-5 max-768:w-[200px] max-768:h-[200px] max-768:mt-5 max-1200:w-[180px] max-1200:h-[180px] max-1200:mt-5"
           src="../../../assets/skills/avatar.jpg"
         />
       </div>
-      <div class="flex flex-col justify-center gap-6">
+      <div
+        class="flex flex-col justify-center gap-6 max-500:gap-2 max-500:mr-[20px] max-768:gap-2 max-1200:gap-2"
+      >
         <div
-          class="text-center text-lg text-white w-[400px] max-500:w-[150px] max-500:text-xs max-500:mt-5"
+          class="text-center text-lg text-white w-[400px] max-500:w-[150px] max-500:text-xs max-500:mt-5 max-768:w-[150px] max-768:text-xs max-768:mt-5 max-1200:w-[150px] max-1200:text-xs max-1200:mt-5"
         >
           If you have any questions, feel free to contact me. Additionally, you
           can download my resume below.
@@ -23,18 +25,24 @@
         <div class="flex justify-center">
           <button
             (click)="onDownloadClick()"
-            class="flex justify-center text-xl text-white rounded-2xl w-[200px] px-4 py-2 bg-[#0064ff] max-500:w-[140px] max-500:text-sm"
+            class="flex justify-center text-xl text-white rounded-2xl w-[200px] px-4 py-2 bg-[#0064ff] max-500:w-[140px] max-500:text-xs max-500:pb-0 max-768:w-[140px] max-768:text-xs max-768:pb-0 max-1200:w-[140px] max-1200:text-xs max-1200:pb-0"
           >
-            <mat-icon class="text-lg mt-[2px]">download</mat-icon>
+            <mat-icon
+              class="text-lg mt-[1.5px] max-500:text-sm max-500:mt-0 max-768:text-sm max-768:mt-0 max-1200:text-sm max-1200:mt-0"
+              >download</mat-icon
+            >
             Download CV
           </button>
         </div>
         <div class="flex justify-center">
           <button
             (click)="scrollToExpertise()"
-            class="rounded-2xl px-4 py-2 flex justify-center text-xl text-white w-[200px] gap-1 bg-[#0064ff] max-500:w-[140px] max-500:text-sm max-500:mb-3"
+            class="flex justify-center text-xl text-white rounded-2xl w-[200px] px-4 py-2 bg-[#0064ff] max-500:w-[140px] max-500:text-xs max-500:pb-0 max-768:w-[140px] max-768:text-xs max-768:pb-0 max-1200:w-[140px] max-1200:text-xs max-1200:pb-0"
           >
-            <mat-icon class="text-lg">comment</mat-icon>
+            <mat-icon
+              class="text-lg max-500:text-sm max-500:mt-0 max-768:text-sm max-768:mt-0 max-1200:text-sm max-1200:mt-0"
+              >comment</mat-icon
+            >
             Contact me
           </button>
         </div>
