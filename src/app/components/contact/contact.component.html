@@ -23,7 +23,7 @@
     class="flex flex-row gap-5 px-[200px] max-500:p-0 max-500:flex-col max-768:flex-col max-768:p-0 max-1200:flex-col max-1200:p-0"
   >
     <div class="bg-white rounded-3xl p-5">
-      <form [formGroup]="form" (submit)="send()">
+      <form [formGroup]="form" (submit)="send()" novalidate>
         <div class="flex gap-3 mb-5">
           <div class="w-1/2">
             <label for="name" style="display: none"></label>
@@ -34,8 +34,25 @@
               name="from_name"
               class="mt-1 p-2 block w-full rounded-md border-2 border-[#e5e7eb] bg-gray-100"
               placeholder="Your name"
+              required
+              ng-model="myName"
             />
+            <!-- <div
+              *ngIf="
+                form.get('from_name')?.invalid &&
+                (form.get('from_name')?.dirty || form.get('from_name')?.touched)
+              "
+              class="alert alert-danger"
+            >
+              <div *ngIf="form.get('from_name')?.errors?.['required']">
+                Name is required.
+              </div>
+              <div *ngIf="form.value('from_name')?.errors?.['minlength']">
+                Name must be at least 4 characters long.
+              </div>
+            </div> -->
           </div>
+
           <div class="w-1/2">
             <label for="email" style="display: none"></label>
             <input
@@ -43,6 +60,7 @@
               type="email"
               id="email"
               name="from_email"
+              [formNoValidate]=""
               class="mt-1 p-2 block w-full rounded-md border-2 border-[#e5e7eb] bg-gray-100"
               placeholder="Your email address"
             />
@@ -63,6 +81,7 @@
         <div class="mb-4">
           <button
             type="submit"
+            [disabled]="!form.valid"
             class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
           >
             Submit

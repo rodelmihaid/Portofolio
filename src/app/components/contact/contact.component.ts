@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 import emailjs from '@emailjs/browser';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { waitForAsync } from '@angular/core/testing';
 import { __await } from 'tslib';
 @Component({
   selector: 'app-contact',
@@ -27,7 +26,7 @@ export class ContactComponent implements OnInit {
     });
     Swal.fire({
       icon: 'success',
-      text: 'Mesajul a fost trimis.',
+      text: 'Message sent successfully',
       timer: 3000, // Ascunde automat alerta după 3 secunde
       timerProgressBar: true, // Bară de progres pentru durata alertei
       toast: true, // Afișează alerta ca și toast
@@ -80,7 +79,7 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      from_name: ['', Validators.required],
+      from_name: ['', Validators.required, Validators.minLength(4)],
       from_email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
     });

@@ -43,6 +43,13 @@ export class MenuComponent implements OnInit {
       cv.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  scrollToContact() {
+    const contact = this.el.nativeElement.querySelector('#contact');
+    if (contact) {
+      contact.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
   ngOnInit() {
     this.scrollService.sectionToScroll$.subscribe((sectionId) => {
       const element = document.getElementById(sectionId);
