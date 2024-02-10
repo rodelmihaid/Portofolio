@@ -17,9 +17,9 @@ export class ContactComponent implements OnInit {
     message: '',
   });
 
-  async send() {
+  send() {
     emailjs.init('3-qrVCNGmTIPS8Xym');
-    let response = await emailjs.send('service_w90ted3', 'template_9il8tkz', {
+    let response = emailjs.send('service_w90ted3', 'template_9il8tkz', {
       from_name: this.form.value.from_name,
       from_email: this.form.value.from_email,
       message: this.form.value.message,
@@ -68,7 +68,7 @@ export class ContactComponent implements OnInit {
 
     Swal.fire({
       icon: 'success',
-      text: 'Adresa de email a fost copiată în clipboard.',
+      text: 'The email address has been copied.',
       timer: 3000, // Ascunde automat alerta după 3 secunde
       timerProgressBar: true, // Bară de progres pentru durata alertei
       toast: true, // Afișează alerta ca și toast
@@ -79,7 +79,7 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      from_name: ['', Validators.required, Validators.minLength(4)],
+      from_name: ['', Validators.required],
       from_email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
     });
